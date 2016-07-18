@@ -4,11 +4,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 
 var GalvanizeHTMLGenerator = yeoman.generators.Base.extend({
-  promptUser: function() {
-    var done = this.async();
-    // greeting
-    console.log(chalk.magenta("Welcome to Galvanize's Linter Generator"));
-  },
+
   createApp: function(){
     // gulp
     this.copy('gulpfile.js', 'gulpfile.js');
@@ -17,6 +13,7 @@ var GalvanizeHTMLGenerator = yeoman.generators.Base.extend({
     // .jscsrc
     this.copy('.jscsrc', '.jscsrc');
   },
+
 });
 
 module.exports = GalvanizeHTMLGenerator;
