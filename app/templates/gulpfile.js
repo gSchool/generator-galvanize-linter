@@ -8,11 +8,6 @@ var runSequence = require('run-sequence');
 
 // *** tasks *** ///
 
-gulp.task('javascript', function () {
-  gulp.src('./src/**/*.js')
-    .pipe(connect.reload());
-});
-
 gulp.task('jshint', function() {
   return gulp.src('./src/**/*.js')
     .pipe(jshint())
@@ -21,25 +16,18 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('style', function() {
-  return gulp.src('src/**/*.js')
+  return gulp.src('./src/**/*.js')
     .pipe(jscs())
     .pipe(jscs.reporter())
     .pipe(jscs.reporter('fail'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/js/*.js', [
+  gulp.watch('./src/**/*.js', [
     'jshint',
-    'javascript',
     'style'
   ]);
 });
 
 // *** defailt task *** //
-gulp.task('default', function() {
-  runSequence(
-    ['jshint'],
-    ['style'],
-    ['watch']
-  );
-});
+gulp.task('default', ['jshint', 'style', 'watch']);

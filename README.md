@@ -9,6 +9,8 @@
 1. Install the generator - `npm install -g generator-galvanize-linter`
 1. Run - `yo galvanize-linter` and after setting the project up run `npm install`
 
+> All files must be placed in the "src" directory!
+
 ## Run
 
 1. `gulp`
