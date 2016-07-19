@@ -29,6 +29,8 @@ var GalvanizeHTMLGenerator = yeoman.generators.Base.extend({
     this.copy('package.json', 'package.json');
     // .jscsrc
     this.copy('.jscsrc', '.jscsrc');
+    // .gitignore
+    this.copy('.gitignore', '.gitignore');
   },
 
 });
