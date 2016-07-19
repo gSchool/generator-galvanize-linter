@@ -17,4 +17,5 @@
 
 ## Todo
 
+1. Update to latest version fo yeoman!
 1. Test various iterations of the generator
