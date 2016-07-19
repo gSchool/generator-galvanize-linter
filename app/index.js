@@ -22,15 +22,15 @@ var GalvanizeHTMLGenerator = yeoman.generators.Base.extend({
   },
   createApp: function() {
     // src directory
-    this.copy('src/.junk', 'src/.junk');
+    this.copy('./src/.junk', './src/.junk');
     // gulp
-    this.copy('gulpfile.js', 'gulpfile.js');
+    this.copy('./gulpfile.js', './gulpfile.js');
     // package.json
-    this.copy('package.json', 'package.json');
+    this.copy('./package.json', './package.json');
     // .jscsrc
-    this.copy('.jscsrc', '.jscsrc');
+    this.copy('./.jscsrc', '.jscsrc');
     // .gitignore
-    this.copy('.gitignore', '.gitignore');
+    this.copy('./.gitignore', './.gitignore');
   },
 
 });
