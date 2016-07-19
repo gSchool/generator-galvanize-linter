@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var runSequence = require('run-sequence');
+
 var jsPaths = ['./src/**/*.js', './src/*.js'];
 
 // *** tasks *** ///
