@@ -14,6 +14,10 @@
     },
     writing: function () {
       this.fs.copy(
+        this.templatePath('src/.junk'),
+        this.destinationRoot()
+      );
+      this.fs.copy(
         this.templatePath('package.json'),
         this.destinationPath('package.json')
       );
@@ -24,10 +28,6 @@
       this.fs.copy(
         this.templatePath('.jscsrc'),
         this.destinationPath('.jscsrc')
-      );
-      this.fs.copy(
-        this.templatePath('src/.junk'),
-        this.destinationRoot()
       );
     }
   });
