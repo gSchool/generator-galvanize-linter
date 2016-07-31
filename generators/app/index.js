@@ -12,11 +12,7 @@
         'Welcome to the finest ' + chalk.red('generator-galvanize-linter') + ' generator!'
       ));
     },
-    writing: function () {
-      this.fs.copy(
-        this.templatePath('src/.junk'),
-        this.destinationRoot()
-      );
+    writingFiles: function () {
       this.fs.copy(
         this.templatePath('package.json'),
         this.destinationPath('package.json')
@@ -28,6 +24,12 @@
       this.fs.copy(
         this.templatePath('.jscsrc'),
         this.destinationPath('.jscsrc')
+      );
+    },
+    writingFolders: function () {
+      this.fs.copy(
+        this.templatePath('src/.junk'),
+        this.destinationRoot()
       );
     }
   });
