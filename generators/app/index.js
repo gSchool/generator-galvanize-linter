@@ -29,7 +29,7 @@
     writingFolders: function () {
       this.fs.copy(
         this.templatePath('src/.junk'),
-        this.destinationRoot()
+        this.destinationPath('src/.junk')
       );
     }
   });
