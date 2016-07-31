@@ -26,11 +26,11 @@
         this.destinationPath('.jscsrc')
       );
       this.fs.copy(
-        this.templatePath('.gitignore'),
+        this.templatePath('gitignore'),
         this.destinationPath('.gitignore')
       );
       this.fs.copy(
-        this.templatePath('src/.junk'),
+        this.templatePath('src/junk'),
         this.destinationPath('src/.junk')
       );
     }
