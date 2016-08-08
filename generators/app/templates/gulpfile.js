@@ -11,7 +11,9 @@ var jsPaths = ['./src/**/*.js', './src/*.js'];
 
 gulp.task('jshint', function() {
   return gulp.src(jsPaths)
-    .pipe(jshint())
+    .pipe(jshint({
+      esnext: true
+    }))
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jshint.reporter('fail'));
 });
